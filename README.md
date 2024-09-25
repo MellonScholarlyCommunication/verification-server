@@ -37,41 +37,23 @@ All fields are mandatory.
 - The verification service is at https://myid.surf.nl .
 - A researcher logs in and edits her profile with her mastodon and homepage links.
 - A public facing profile page is available for her at https://myid.surf.nl/profile/2134 .
-- Via content negotiation a Web agent can request the HTML and JSON-LD view of the profile.
-
-E.g.
+- The JSON-LD can be published inline in the HTML document using the `<script type="application/ld+json">..JSON-LD</script>` header
 
 ```
-$ curl -H 'Accept: text/html' https://myid.surf.nl/profile/2134
-<html>
- <head>
-   <title>Researcher 2134</title>
- </head>
- <body>
-   <p>
-    homepage: <a rel="me" href="https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171">https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171</a>
-   </p>
-   <p>
-    mastodon: <a rel="me" href="https://mastodon.social/@patrickhochstenbach">https://mastodon.social/@patrickhochstenbach</a>
-   </p>
- </body>
-</html>
-```
-
-```
-$ curl -H 'Accept: application/ld+json' https://myid.surf.nl/profile/2134
+<script type="application/ld+json">
 {
     "@context": "https://labs.eventnotifications.net/contexts/profile.jsonld",
-    "id": "https://myid.surf.nl/profile/2134",
+    "id": "http://localhost:8000/profile/8000",
     "type": "PersonalProfileDocument",
     "primaryTopic": {
-      "id": "https://myid.surf.nl/profile/2134#me",
-      "type": "Person",
-      "mastodon": "https://mastodon.social/@patrickhochstenbach",
-      "homepage": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171"
-      "modified": "2024-09-24T09:31:10"
+        "id": "http://localhost:8000/profile/8000#me",
+        "type": "Person",
+        "mastodon": "https://mastodon.social/@patrickhochstenbach",
+        "homepage": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171",
+        "modified": "2024-09-24T09:31:10"
     }
 }
+</script>
 ```
 
 Note: when serving the HTML record it is advisory to serve the Mastodon links with the `rel="me"` attribute. This will trigger mastodon verification services to recognize these links.
