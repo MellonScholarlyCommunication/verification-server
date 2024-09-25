@@ -1,9 +1,9 @@
 {
     "@context": "https://labs.eventnotifications.net/contexts/profile.jsonld",
-    "id": "https://patrickhochstenbach.net/profile/card",
+    "id": "http://localhost:8000/profile/patrick.jsonld",
     "type": "PersonalProfileDocument",
     "primaryTopic": {
-      "id": "https://patrickhochstenbach.net/profile/card#me",
+      "id": "http://localhost:8000/profile/patrick.jsonld#me",
       "type": "Person",
       "mastodon": "https://mastodon.social/@patrickhochstenbach",
       "homepage": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171",
