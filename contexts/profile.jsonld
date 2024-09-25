@@ -1,0 +1,29 @@
+{
+    "@context" : {
+      "Person" : "foaf:Person",
+      "PersonalProfileDocument" : "foaf:PersonalProfileDocument",
+      "foaf" : "http://xmlns.com/foaf/0.1/",
+      "id" : "@id",
+      "type" : "@type",
+      "homepage" : {
+         "@id" : "foaf:homepage",
+         "@type" : "@id"
+      },
+      "maker" : {
+         "@id" : "foaf:maker",
+         "@type" : "@id"
+      },
+      "mastodon" : {
+         "@id" : "http://www.wikidata.org/prop/direct/P4033",
+         "@type" : "@id"
+      },
+      "primaryTopic" : {
+         "@id" : "foaf:primaryTopic",
+         "@type" : "@id"
+      },
+      "modified": {
+         "@id": "dcterms:modified",
+         "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    }
+ }

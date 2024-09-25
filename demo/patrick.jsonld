@@ -1,0 +1,12 @@
+{
+    "@context": "https://labs.eventnotifications.net/contexts/profile.jsonld",
+    "id": "https://patrickhochstenbach.net/profile/card",
+    "type": "PersonalProfileDocument",
+    "primaryTopic": {
+      "id": "https://patrickhochstenbach.net/profile/card#me",
+      "type": "Person",
+      "mastodon": "https://mastodon.social/@patrickhochstenbach",
+      "homepage": "https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171",
+      "modified": "2024-09-24T09:31:10"
+    }
+}
