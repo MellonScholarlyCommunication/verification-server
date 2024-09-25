@@ -1,0 +1,15 @@
+{
+  "name": "verification-server",
+  "version": "1.0.0",
+  "description": "A demonstrator verification service",
+  "main": "index.js",
+  "repository": "git@github.com:MellonScholarlyCommunication/verification-server.git",
+  "author": "Patrick Hochstenbach <patrick.hochstenbach@ugent.be>",
+  "license": "MIT",
+  "scripts": {
+    "server": "npx mellon-server"
+  },
+  "dependencies": {
+    "mellon-server": "^1.1.2"
+  }
+}
