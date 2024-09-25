@@ -49,10 +49,10 @@ $ curl -H 'Accept: text/html' https://myid.surf.nl/profile/2134
  </head>
  <body>
    <p>
-    homepage: <a href="https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171">https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171</a>
+    homepage: <a rel="me" href="https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171">https://wiki.mycontributions.info/en/researcher/orcid/0000-0001-8390-6171</a>
    </p>
    <p>
-    mastodon: <a href="https://mastodon.social/@patrickhochstenbach">https://mastodon.social/@patrickhochstenbach</a>
+    mastodon: <a rel="me" href="https://mastodon.social/@patrickhochstenbach">https://mastodon.social/@patrickhochstenbach</a>
    </p>
  </body>
 </html>
@@ -73,3 +73,5 @@ $ curl -H 'Accept: application/ld+json' https://myid.surf.nl/profile/2134
     }
 }
 ```
+
+Note: when serving the HTML record it is advisory to serve the Mastodon links with the `rel="me"` attribute. This will trigger mastodon verification services to recognize these links.
