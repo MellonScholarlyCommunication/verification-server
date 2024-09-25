@@ -57,3 +57,23 @@ All fields are mandatory.
 ```
 
 Note: when serving the HTML record it is advisory to serve the Mastodon links with the `rel="me"` attribute. This will trigger mastodon verification services to recognize these links.
+
+## Demo
+
+### Install
+
+```
+yarn install
+```
+
+### Run
+
+```
+yarn server
+```
+
+### Test
+
+```
+./bin/verification-cli.js http://localhost:8000/profile/8000
+```
