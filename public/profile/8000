@@ -4,6 +4,9 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
+        <link
+	    rel="me"
+	    href="https://mastodon.social/@patrickhochstenbach"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="application/ld+json" id="data">
 {
